@@ -1,9 +1,4 @@
 .header {
-    background-color: var(--primary);
     padding: 1em;
     text-align: center;
-}
-
-.header > h2 {
-    color: white;
 }
