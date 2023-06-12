@@ -1,5 +1,8 @@
 .header {
     padding: 1em;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .title {
@@ -14,8 +17,18 @@
     height: 129px;
     border-radius: 50%;
     margin: 0 auto;
+    z-index: 99;
 }
 
 .logo > h1 {
     color: var(--light);
+}
+
+.logo-shadow {
+    width: 129px;
+    height: 129px;
+    background: var(--warning);
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 21px;
 }

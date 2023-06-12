@@ -1,4 +1,4 @@
-import Fieldset from '../FieldSet'
+
 import './Form.css'
 
 export default function Form(){
@@ -17,7 +17,22 @@ export default function Form(){
                 <label htmlFor="start-date">Start Date</label>
                 <input id="start-date" type="text" />
 
-                <Fieldset />
+                <fieldset className="adress">
+                    <legend>Adress</legend>
+
+                    <label htmlFor="street">Street</label>
+                    <input id="street" type="text" />
+
+                    <label htmlFor="city">City</label>
+                    <input id="city" type="text" />
+
+                    <label htmlFor="state">State</label>
+                    <select name="state" id="state"></select>
+
+                    <label htmlFor="zip-code">Zip Code</label>
+                    <input id="zip-code" type="number" />
+
+                </fieldset>
             </form>
         </>
     )

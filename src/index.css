@@ -20,6 +20,7 @@
   background-color: var(--light);
   max-width: 1440px;
   margin: 0 auto;
+  height: 100%;
 }
 
 body {
@@ -102,4 +103,13 @@ body {
 
 .form-part > h2 {
   text-align: center;
+}
+
+.address {
+  margin-top: 10px;
+}
+
+fieldset {
+  border: solid 1px var(--primary);
+  padding: 0;
 }
