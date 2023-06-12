@@ -84,3 +84,22 @@ body {
 .text-dark {
   color: var(--dark);
 }
+
+/*graphic elements*/
+
+.b-shadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/*general elements*/
+
+.form-part {
+  margin: 1em auto;
+  width: 500px;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.form-part > h2 {
+  text-align: center;
+}

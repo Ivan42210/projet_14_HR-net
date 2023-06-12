@@ -1,4 +1,21 @@
 .header {
     padding: 1em;
-    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 129px;
+    background: var(--dark);
+    height: 129px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.logo > h1 {
+    color: var(--light);
 }
