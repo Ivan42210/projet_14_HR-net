@@ -1,5 +1,5 @@
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from '../Pages/Home/home'
+import Home from '../Pages/Home'
 import Employees from '../Pages/Employees'
 
 export default function Layout(){

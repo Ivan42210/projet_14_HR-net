@@ -3,3 +3,33 @@ label {
     margin-top: 1rem;
     margin-bottom: 10px;
 }
+
+.address > legend {
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-input {
+    width: 220px;
+    padding: 2px;
+}
+
+.submit-btn {
+    width: 150px;
+    height: 30px;
+    margin-top: 1em;
+    align-self: center;
+    background: var(--success);
+    color: var(--light);
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}

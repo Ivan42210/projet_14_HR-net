@@ -8,13 +8,14 @@ import { useState } from 'react'
 
 function Home() {
 
-  const [setDatas, GenDatas] = useState([]);
+  const [GenDatas, setDatas] = useState([]);
 
   const onSubmit = (data) =>{
     setDatas(data)
+    console.log(GenDatas)
   }
 
-  console.log(GenDatas)
+ 
   
 
   return (

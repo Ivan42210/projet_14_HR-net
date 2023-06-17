@@ -1,0 +1,37 @@
+.selector {
+    position: relative;
+    height: auto;
+}
+
+.selector-btn {
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selector-list {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+
+.selector-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.selector-item:hover {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.selector-icon {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--light);
+}
