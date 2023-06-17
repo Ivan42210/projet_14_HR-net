@@ -32,3 +32,12 @@
     position: absolute;
     margin-left: 21px;
 }
+
+.logo-shadow-second {
+    width: 129px;
+    height: 129px;
+    background: var(--success);
+    border-radius: 50%;
+    position: absolute;
+    margin-right: 21px;
+}

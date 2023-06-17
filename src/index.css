@@ -107,9 +107,6 @@ body {
 
 .address {
   margin-top: 10px;
-}
-
-fieldset {
   border: solid 1px var(--primary);
   padding: 0;
 }

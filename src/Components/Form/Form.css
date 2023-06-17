@@ -3,9 +3,3 @@ label {
     margin-top: 1rem;
     margin-bottom: 10px;
 }
-
-form > input {
-    padding: 4px;
-    border-radius: 30px;
-    width: 200px;
-}

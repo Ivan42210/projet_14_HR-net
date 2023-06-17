@@ -10,6 +10,9 @@ export default function Header(){
             <div className='logo-shadow'>
                 
             </div>
+            <div className='logo-shadow-second'>
+                
+            </div>
         </header>
     )
 }

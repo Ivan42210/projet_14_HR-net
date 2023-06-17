@@ -3,9 +3,18 @@ import Header from '../../Components/Header'
 import './Home.css'
 import '../../styles/Button.css'
 import { NavLink } from 'react-router-dom'
-import Form from '../../Components/form'
+import Form from '../../Components/Form'
+import { useState } from 'react'
 
 function Home() {
+
+  const [setDatas, GenDatas] = useState([]);
+
+  const onSubmit = (data) =>{
+    setDatas(data)
+  }
+
+  console.log(GenDatas)
   
 
   return (
@@ -17,7 +26,7 @@ function Home() {
         
         <div className='form-part b-shadow'> 
           <h2>Create Employee</h2>
-          <Form />
+          <Form onSubmit={onSubmit}/>
         </div>
      </main>
     </>
