@@ -10,12 +10,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: black;
+    color: white;
 }
 
 .selector-list {
     position: absolute;
     z-index: 999;
     width: 100%;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .selector-item {
@@ -24,8 +28,8 @@
 }
 
 .selector-item:hover {
-    background: var(--dark);
-    color: var(--light);
+    background: black;
+    color: white;
 }
 
 .selector-icon {
@@ -33,5 +37,5 @@
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid var(--light);
+    border-top: 8px solid white;
 }

@@ -12,8 +12,10 @@
   "dependencies": {
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-date-picker": "^10.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.12.1"
+    "react-router-dom": "^6.12.1",
+    "select-label-dropdown-fix": "^1.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.5",
@@ -27,5 +29,18 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "vite": "^4.3.2"
-  }
+  },
+  "description": "![Node.js](https://img.shields.io/badge/Node.js-14) ![React.js](https://img.shields.io/npm/v/react) ![CSS](https://img.shields.io/badge/CSS:3-blue) ![Framework](https://img.shields.io/badge/Framework-React.js-blue) ![html](https://img.shields.io/badge/HTML:5-red)",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivan42210/projet_14_HR-net.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivan42210/projet_14_HR-net/issues"
+  },
+  "homepage": "https://github.com/Ivan42210/projet_14_HR-net#readme"
 }

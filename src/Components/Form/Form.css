@@ -22,14 +22,8 @@ form {
 
 .submit-btn {
     width: 150px;
-    height: 30px;
     margin-top: 1em;
     align-self: center;
-    background: var(--success);
-    color: var(--light);
     border: none;
-    border-radius: 30px;
-    font-size: 15px;
-    font-weight: bold;
     cursor: pointer;
 }

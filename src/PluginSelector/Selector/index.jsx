@@ -19,11 +19,11 @@ export default function SelectMenu({labelName, options, onChange}){
   return(
     <>
       <div className='selector'> 
-          <label  className='selector-btn bg-dark text-light' 
+          <label  className='selector-btn' 
                   htmlFor={labelName}
-                  onClick={toggleList}>{labelvalue} <div className='selector-icon'></div></label>
+                  onClick={toggleList}>{labelvalue}<div className='selector-icon'></div></label>
           { isOpen && (
-            <ul className='selector-list bg-light b-shadow'>
+            <ul className='selector-list'>
               { options.map((option, index) =>(
               <li key={index} className='selector-item' onClick={() => {handleOnClick(option)}}>{option}</li>
               ))}
@@ -37,6 +37,7 @@ export default function SelectMenu({labelName, options, onChange}){
 
 SelectMenu.propTypes = {
   labelName: PropTypes.string,
+  onChange: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 

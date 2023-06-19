@@ -12,7 +12,6 @@ function Home() {
 
   const onSubmit = (data) =>{
     setDatas(data)
-    console.log(GenDatas)
   }
 
  

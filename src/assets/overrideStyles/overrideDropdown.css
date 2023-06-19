@@ -1,0 +1,17 @@
+.mbic-selector-btn {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.mbic-selector-icon {
+    border-top: 8px solid var(--light);
+}
+
+.mbic-selector-list {
+    background: var(--light);
+}
+
+.mbic-selector-item:hover {
+    background: var(--dark);
+    color: var(--light);
+}
