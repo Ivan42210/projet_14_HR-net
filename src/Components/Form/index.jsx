@@ -7,14 +7,18 @@ import Selector from 'select-label-dropdown-fix'
 import DatePicker from 'react-date-picker'
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css';
+import Overlay from 'react-overlay-component'
 import '../../assets/overrideStyles/calendarStyle.css'
 import '../../assets/overrideStyles/overrideDropdown.css'
+import '../../assets/overrideStyles/modalOverride.css'
 import { formatDate } from '../../services/formatDate'
+
+import CloseBtn from '../CloseBtn'
 
 export default function Form({onSubmit}){
 
     const [formData, setFormData ] = useState({
-        FirsName: "",
+        FirstName: "",
         LastName: "",
         StartDate: "",
         BirthDate: "",
@@ -26,31 +30,36 @@ export default function Form({onSubmit}){
     });
 
     const [ startDate, setStartDate] = useState(new Date());
-    const[birthDate, setBirthDate] = useState(new Date())
+    const[birthDate, setBirthDate] = useState(new Date());
+    const [isOpen, setOverlay] = useState(false)
 
-
-    const handleSelectorState = (selectedValue) => {
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            State: selectedValue,
-        }))
+    const configs = {
+        animate: true,
     }
 
-    const handleSelectorDepartment = (selectedValue) => {
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            Department: selectedValue,
-        }))
-    }
 
-    const handleBirthDate = (selectedValue) => {
-        setBirthDate(selectedValue);
-        const formDate = formatDate(selectedValue);
-        setFormData((prevFormData) => ({
-          ...prevFormData,
-          BirthDate: formDate,
-        }));
+    const handleDateChange = (fieldName, selectedValue) => {
+        if (fieldName === "BirthDate" || fieldName === "StartDate") {
+          const formDate = formatDate(selectedValue);
+          setFormData((prevFormData) => ({
+            ...prevFormData,
+            [fieldName]: formDate,
+          }));
+        }
       };
+      
+      
+      const handleBirthDate = (selectedValue) => {
+        setBirthDate(selectedValue);
+        handleDateChange("BirthDate", selectedValue);
+      };
+      
+      const handleStartDate = (selectedValue) => {
+        setStartDate(selectedValue);
+        handleDateChange("StartDate", selectedValue);
+      };
+      
+    
 
     const handleInputChange = (fielName, fieldValue) =>{
         setFormData((prevFormData) => ({
@@ -59,15 +68,11 @@ export default function Form({onSubmit}){
         }))
     }  
     
-    
-
-
-   
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(formData)
         onSubmit(formData)
+        setOverlay(true)
         
     }
 
@@ -77,7 +82,7 @@ export default function Form({onSubmit}){
         <>
             <form onSubmit={handleSubmit}> 
                 <label htmlFor="first-name">First Name</label>
-                <input type="text" id='first-name' className='text-input' value={formData.FirsName} onChange={(e) => handleInputChange("FirstName", e.target.value)}/>
+                <input type="text" id='first-name' className='text-input' value={formData.FirstName} onChange={(e) => handleInputChange("FirstName", e.target.value)}/>
 
                 <label htmlFor="last-name">Last Name</label>
                 <input type="text" id="last-name" className='text-input' value={formData.LastName} onChange={(e) => handleInputChange("LastName", e.target.value)}/>
@@ -86,7 +91,7 @@ export default function Form({onSubmit}){
                 <DatePicker onChange={handleBirthDate} value={birthDate}/>
 
                 <label htmlFor="start-date">Start Date</label>
-                <DatePicker onChange={setStartDate} value={startDate}/>
+                <DatePicker onChange={handleStartDate} value={startDate}/>
 
                 <fieldset className='address'>
                     <legend>Address</legend>
@@ -98,7 +103,7 @@ export default function Form({onSubmit}){
                     <input id="city" type="text" className='text-input' value={formData.City} onChange={(e) => handleInputChange("City", e.target.value)}/>
 
                     <label htmlFor="state">State</label>
-                    <Selector options={states} onChange={handleSelectorState} labelName={'State'}/>
+                    <Selector options={states} onChange={(selectedValue) => handleInputChange("State", selectedValue)} labelName={'State'}/>
 
                     <label htmlFor="zip-code">Zip Code</label>
                     <input id="zip-code" type="number" className='text-input' value={formData.ZipCode} onChange={(e) => handleInputChange("ZipCode", e.target.value)}/>
@@ -106,10 +111,17 @@ export default function Form({onSubmit}){
                 </fieldset>
 
                     <label>Department</label>
-                    <Selector options={departments} onChange={handleSelectorDepartment} labelName={'Department'}/>
+                    <Selector options={departments} onChange={(selectedValue) => handleInputChange("Department", selectedValue)} labelName={'Department'}/>
 
                     <button type='submit' className='btn btn-success submit-btn'>Save</button>
             </form>
+            <Overlay configs={configs} isOpen={isOpen}>
+
+                <h3>Employee created</h3>
+
+                
+                <CloseBtn clickFn={() => {setOverlay(false)}}/>
+            </Overlay>
         </>
     )
 }
