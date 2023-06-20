@@ -1,7 +1,8 @@
+import {useDispatch} from 'react-redux'
+import { addEmployee } from '../../employeeSlice'
 import { useState } from 'react'
 import { departments } from '../../services/departments'
 import { states } from '../../services/UsState'
-import {PropTypes} from 'prop-types'
 import './Form.css'
 import Selector from 'select-label-dropdown-fix'
 import DatePicker from 'react-date-picker'
@@ -12,22 +13,23 @@ import '../../assets/overrideStyles/calendarStyle.css'
 import '../../assets/overrideStyles/overrideDropdown.css'
 import '../../assets/overrideStyles/modalOverride.css'
 import { formatDate } from '../../services/formatDate'
-
 import CloseBtn from '../CloseBtn'
 
-export default function Form({onSubmit}){
+export default function Form(){
+
+    const dispatch = useDispatch();
 
     const [formData, setFormData ] = useState({
         FirstName: "",
         LastName: "",
         StartDate: "",
+        Department: "",
         BirthDate: "",
         Street:"",
         City: "",
         State: "",
-        ZipCode: "",
-        Department: "",
-    });
+        ZipCode: ""
+        });
 
     const [ startDate, setStartDate] = useState(new Date());
     const[birthDate, setBirthDate] = useState(new Date());
@@ -46,6 +48,8 @@ export default function Form({onSubmit}){
             [fieldName]: formDate,
           }));
         }
+
+        console.log(formData)
       };
       
       
@@ -71,7 +75,8 @@ export default function Form({onSubmit}){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSubmit(formData)
+        console.log(formData)
+        dispatch(addEmployee(formData));
         setOverlay(true)
         
     }
@@ -127,6 +132,4 @@ export default function Form({onSubmit}){
 }
 
 
-Form.propTypes = {
-    onSubmit: PropTypes.func.isRequired
-  };
+
