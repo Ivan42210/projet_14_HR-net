@@ -2,6 +2,7 @@ import {useSelector} from 'react-redux'
 import { useEffect } from 'react';
 import './Employees.css'
 import "datable-react/dist/index.css";
+import '../../assets/overrideStyles/dataTableOverride.css'
 import {DataTable} from 'datable-react';
 import { NavLink } from 'react-router-dom';
 
@@ -32,15 +33,16 @@ export default function Employees(){
 
     return(
         <main className="employees-page">
-                <h3>Current employees</h3>
-                <DataTable
-                    labels={labels}
-                    data={employees}
-                    language={true}
-                />
-           
+                <h3 className='employees-title'>Current employees</h3>
+                <section className='table-section'>
+                    <DataTable
+                        labels={labels}
+                        data={employees}
+                        language={true}
+                    />
                 
-            <NavLink to={'/'}>Home</NavLink>
+                <NavLink to={'/'} className={'mx-auto btn btn-success'}>Home</NavLink>
+                </section>
         </main>
     )
 }

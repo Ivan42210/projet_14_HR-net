@@ -1,0 +1,16 @@
+.column__content {
+    background: var(--dark) !important;
+}
+
+.arrow > p {
+    color: var(--light) !important;
+}
+
+.dataTable__wrapper {
+    width: 95%;
+}
+
+.pagination > div > button {
+    background-color: var(--dark) !important;
+    color: var(--light);
+}

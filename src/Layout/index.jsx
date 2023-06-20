@@ -1,6 +1,7 @@
 
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import store from '../store'
+import '../styles/Button.css'
 import Home from '../Pages/Home'
 import Employees from '../Pages/Employees'
 import { Provider } from 'react-redux/es/exports'
