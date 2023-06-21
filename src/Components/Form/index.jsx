@@ -87,10 +87,10 @@ export default function Form(){
         <>
             <form onSubmit={handleSubmit}> 
                 <label htmlFor="first-name">First Name</label>
-                <input type="text" id='first-name' className='text-input' value={formData.FirstName} onChange={(e) => handleInputChange("FirstName", e.target.value)}/>
+                <input type="text" id='first-name' className='text-input' value={formData.FirstName} onChange={(e) => handleInputChange("FirstName", e.target.value)} aria-label='first name'/>
 
                 <label htmlFor="last-name">Last Name</label>
-                <input type="text" id="last-name" className='text-input' value={formData.LastName} onChange={(e) => handleInputChange("LastName", e.target.value)}/>
+                <input type="text" id="last-name" className='text-input' value={formData.LastName} onChange={(e) => handleInputChange("LastName", e.target.value)} aria-label='Last name'/>
 
                 <label htmlFor="date-of-birth">Date of Birth</label>
                 <DatePicker onChange={handleBirthDate} value={birthDate}/>
@@ -102,16 +102,16 @@ export default function Form(){
                     <legend>Address</legend>
 
                     <label htmlFor="street">Street</label>
-                    <input id='street' type="text" className='text-input' value={formData.Street} onChange={(e) => handleInputChange("Street", e.target.value)}/>
+                    <input id='street' type="text" className='text-input' value={formData.Street} onChange={(e) => handleInputChange("Street", e.target.value)} aria-label='Street'/>
 
                     <label htmlFor="city">City</label>
-                    <input id="city" type="text" className='text-input' value={formData.City} onChange={(e) => handleInputChange("City", e.target.value)}/>
+                    <input id="city" type="text" className='text-input' value={formData.City} onChange={(e) => handleInputChange("City", e.target.value)} aria-label='City'/>
 
                     <label htmlFor="state">State</label>
                     <Selector options={states} onChange={(selectedValue) => handleInputChange("State", selectedValue)} labelName={'State'}/>
 
                     <label htmlFor="zip-code">Zip Code</label>
-                    <input id="zip-code" type="number" className='text-input' value={formData.ZipCode} onChange={(e) => handleInputChange("ZipCode", e.target.value)}/>
+                    <input id="zip-code" type="number" className='text-input' value={formData.ZipCode} onChange={(e) => handleInputChange("ZipCode", e.target.value)} aria-label='zip code'/>
                     
                 </fieldset>
 
@@ -122,7 +122,7 @@ export default function Form(){
             </form>
             <Overlay configs={configs} isOpen={isOpen}>
 
-                <h3>Employee created</h3>
+                <h3 aria-label='employee has been created'>Employee created</h3>
 
                 
                 <CloseBtn clickFn={() => {setOverlay(false)}}/>
