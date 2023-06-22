@@ -3,20 +3,18 @@
  *
  * @component Form
  */
+import './Form.min.css';
+import 'react-date-picker/dist/DatePicker.css';
+import 'react-calendar/dist/Calendar.css';
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '../../employeeSlice';
 import { useState } from 'react';
 import { departments } from '../../services/departments';
 import { states } from '../../services/UsState';
-import './Form.css';
 import Selector from 'select-label-dropdown';
 import DatePicker from 'react-date-picker';
-import 'react-date-picker/dist/DatePicker.css';
-import 'react-calendar/dist/Calendar.css';
 import Overlay from 'react-overlay-component';
-import '../../assets/overrideStyles/calendarStyle.css';
-import '../../assets/overrideStyles/overrideDropdown.css';
-import '../../assets/overrideStyles/modalOverride.css';
+import '../../assets/overrideStyles/OverrideForm.min.css'
 import { formatDate } from '../../services/formatDate';
 import CloseBtn from '../CloseBtn';
 
