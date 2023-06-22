@@ -21,7 +21,7 @@
     "react-router-dom": "^6.12.1",
     "redux": "^4.2.1",
     "redux-devtools": "^3.7.0",
-    "select-label-dropdown-fix": "^1.0.2"
+    "select-label-dropdown": "^1.0.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.5",
