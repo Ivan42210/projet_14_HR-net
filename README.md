@@ -1,6 +1,9 @@
 
 # RHnet
 
+[![Node.js](https://img.shields.io/badge/Node.js-14) ![React.js](https://img.shields.io/npm/v/react) ![CSS](https://img.shields.io/badge/CSS:3-blue) ![Framework](https://img.shields.io/badge/Framework-React.js-blue) ![html](https://img.shields.io/badge/HTML:5-red)
+
+
 ## Description
 
 RHnet is a React web application that allows users to enter employees' information and save it into a database table. The application is built using Node.js and React.js, and it leverages various plugins and frameworks to provide an intuitive user interface and seamless data storage.
