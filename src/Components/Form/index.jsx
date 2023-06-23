@@ -14,7 +14,7 @@ import { states } from '../../services/UsState';
 import Selector from 'select-label-dropdown';
 import DatePicker from 'react-date-picker';
 import Overlay from 'react-overlay-component';
-import '../../assets/overrideStyles/OverrideForm.min.css'
+import './OverrideForm.min.css'
 import { formatDate } from '../../services/formatDate';
 import CloseBtn from '../CloseBtn';
 

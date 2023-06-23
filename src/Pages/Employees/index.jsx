@@ -3,11 +3,10 @@
  *
  * @component Employees
  */
-import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import './Employees.min.css';
 import "datable-react/dist/index.css";
-import '../../assets/overrideStyles/dataTableOverride.css';
+import './dataTableOverride.min.css';
+import { useSelector } from 'react-redux';
 import { DataTable } from 'datable-react';
 import { NavLink } from 'react-router-dom';
 
@@ -31,12 +30,7 @@ export default function Employees() {
         { text: "Zip Code", value: "ZipCode" }
     ];
 
-    /**
-     * Logs the 'employees' state whenever it changes.
-     */
-    useEffect(() => {
-        console.log(employees);
-    }, [employees]);
+
 
     return (
         <main className="employees-page">
