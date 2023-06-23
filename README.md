@@ -1,7 +1,7 @@
 
 # RHnet
 
-[![Node.js](https://img.shields.io/badge/Node.js-14) ![React.js](https://img.shields.io/npm/v/react) ![CSS](https://img.shields.io/badge/CSS:3-blue) ![Framework](https://img.shields.io/badge/Framework-React.js-blue) ![html](https://img.shields.io/badge/HTML:5-red)
+![Node.js](https://img.shields.io/badge/Node.js-14) ![React.js](https://img.shields.io/npm/v/react) ![CSS](https://img.shields.io/badge/CSS:3-blue) ![Framework](https://img.shields.io/badge/Framework-React.js-blue) ![html](https://img.shields.io/badge/HTML:5-red)
 
 
 ## Description
